@@ -1,0 +1,33 @@
+version: '3.8' 
+services:
+  api:
+    image: api-plf-eng:v1
+    container_name: api-plf-eng
+    restart: always
+    environment:
+      TF_VAR_access_key: '{{access_key}}'
+      TF_VAR_secret_key: '{{secret_key}}'
+      TF_VAR_aws_role_arn: '{{aws_role_arn}}'
+      TF_VAR_fwb_cloud_token: '{{fwb_cloud_token}}'
+      TF_VAR_github_token: '{{github_token}}'
+      TF_VAR_fortidevsec_org: '{{fortidevsec_org}}'
+      TF_VAR_fortidevsec_app: '{{fortidevsec_app}}'
+    stdin_open: true
+    tty: true
+    ports:
+      - '8080:8080'
+    networks:
+      - net-plf-eng
+  web:
+    image: web-plf-eng:v1
+    container_name: web-plf-eng
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - '8000:80'
+    networks:
+      - net-plf-eng
+networks:
+  net-plf-eng:
+    external: true
