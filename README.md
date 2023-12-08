@@ -59,14 +59,14 @@ You can find these folders:
 
 **READ**
 
-The Terrafom code that has been deployed create the following resources:
+The deployed Terrafom code has created the following resources:
 
-- AWS VPC and necessary subnets
-- Fortigate NGF
-- Kubernetes self-managed cluster
-- AWS Route53 DNS records
-- FortiWEB Cloud new APPs
-- GitHub repository (secrests and workflow action)
+- AWS VPC and necessary subnets.
+- Fortigate NGFW.
+- Kubernetes self-managed cluster.
+- AWS Route53 DNS records.
+- FortiWEB Cloud new APPs.
+- GitHub repository (secrests and workflow action).
 
 It is mandatory to provide necessary API tokens to configure all those services.
 
