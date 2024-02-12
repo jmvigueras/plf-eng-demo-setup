@@ -1,0 +1,6 @@
+// GCP Environment
+project = "xxx"
+token   = "xxx"
+
+# FortiCNP Container Guardian new K8S cluster token
+forticnp_token = "xxx"
